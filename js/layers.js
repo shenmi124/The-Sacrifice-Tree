@@ -293,8 +293,8 @@ addLayer("s", {
 	},
 	clickables:{
 		1000:{
-			title() {return player.e.effect6.eq(1) ? player.s.points.mul(upgradeEffect("s",24)).gte(10000) : player.s.points.mul(upgradeEffect("s",24)).gte(1000000) ? `<s>阶级晋升</s><br><em>献祭</em>` : `<s>阶级晋升</s><br><em class="red">献祭</em>`},
-			display() {return player.e.effect6.eq(1) ? player.s.points.mul(upgradeEffect("s",24)).gte(10000) : player.s.points.mul(upgradeEffect("s",24)).gte(1000000) ? `<h3>当你凝视深渊,深渊也在凝视你` : `<h3 class="red">当你凝视深渊,深渊也在凝视你`},
+			title() {return `阶级晋升</s><br><em>献祭</em>`},
+			display() {return `<h3>当你凝视深渊,深渊也在凝视你`},
 			canClick(){return player.e.effect6.eq(1) ? player.s.points.mul(upgradeEffect("s",24)).gte(10000) : player.s.points.mul(upgradeEffect("s",24)).gte(1000000)},
 			unlocked(){return player.e.sacrifice.eq(0)},
 			onClick(){
@@ -436,7 +436,7 @@ addLayer("s", {
 		"sacrifice":{
 			content:[
 			"blank",
-			['display-text',function(){return player.e.effect6.eq(1) ? `<h3>获得 <h3 class="red">`+format(Decimal.add(10000).div(upgradeEffect("s",24)),0)`+</h3>  献祭点跳转到下一阶级<br></h3><h6>你还有 `+format(player.e.stage,0)+` 阶级来赢得游戏</h6>` : `<h3>获得 <h3 class="red">`+format(Decimal.add(1000000).div(upgradeEffect("s",24)),0)+`</h3>  献祭点跳转到下一阶级<br></h3><h6>你还有 `+format(player.e.stage,0)+` 阶级来赢得游戏</h6>`}],
+			['display-text',function(){return player.e.effect6.eq(1) ? `<h3>获得 <h3 class="red">`+format(Decimal.add(10000).div(upgradeEffect("s",24)),0)+`</h3>  献祭点跳转到下一阶级<br></h3><h6>你还有 `+format(player.e.stage,0)+` 阶级来赢得游戏</h6>` : `<h3>获得 <h3 class="red">`+format(Decimal.add(1000000).div(upgradeEffect("s",24)),0)+`</h3>  献祭点跳转到下一阶级<br></h3><h6>你还有 `+format(player.e.stage,0)+` 阶级来赢得游戏</h6>`}],
 			"blank",
 			"blank",
 			"blank",
