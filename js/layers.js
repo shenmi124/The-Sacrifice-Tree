@@ -1,6 +1,6 @@
 addLayer("s", {
     name: "sacrifice",
-    symbol: "献祭",
+    symbol: "<s>献祭",
     position: 1,
     startData() { return {
         unlocked: true,
@@ -488,4 +488,27 @@ addLayer("e", {
 	update(diff) {
 	},
     layerShown(){return false},
+})
+
+addLayer("afdian", {
+    name: "afdian",
+    symbol: "<h6>捐助",
+    position: 10,
+    startData() { return {
+        unlocked: true,
+    }},
+	tooltip() { 
+		return `捐助(donate)`
+	},
+    color: "red",
+    type: "none",
+    row: "side",
+    layerShown(){return true},
+	tabFormat: [
+        "main-display",
+        "prestige-button",
+        ["display-text", function() {return '<h1>https://afdian.net/@Mysterious124'}],
+        "blank",
+        "upgrades"
+    ]
 })
