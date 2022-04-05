@@ -507,7 +507,7 @@ addLayer("afdian", {
 	tabFormat: [
         "main-display",
         "prestige-button",
-        ["display-text", function() {return '<h1>https://afdian.net/@Mysterious124'}],
+        ["display-text", function() {return `<a class="link" href="https://afdian.net/@Mysterious124" target="_blank"> 点我跳转到捐助页面</a>`}],
         "blank",
         "upgrades"
     ]
